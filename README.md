@@ -6,7 +6,6 @@ Learn how to build and deploy a modern Web3 portfolio website tailored for block
 
 ## Project setup
 
-npm i 
+npm i
 
 npm run dev
-
