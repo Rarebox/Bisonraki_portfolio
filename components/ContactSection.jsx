@@ -270,7 +270,7 @@
 // export default ContactSection;
 
 import { useState, useEffect, useRef } from "react";
-import { useForm, ValidationError } from "@formspree/react";
+//import { useForm, ValidationError } from "@formspree/react";
 import {
   FaPaperPlane,
   FaMapMarkerAlt,
@@ -284,20 +284,12 @@ import {
   FaExclamationCircle,
 } from "react-icons/fa";
 
-const FORMSPREE_API_KEY = process.env.NEXT_PUBLIC_FORMSPREE_API_KEY;
-const CALENDLY = process.env.NEXT_PUBLIC_CALENDLY;
-
 const ContactSection = ({ data, profile }) => {
-  const [state, handleSubmit] = useForm(FORMSPREE_API_KEY);
+  //const [state, handleSubmit] = useForm(FORMSPREE_API_KEY);
   const [isVisible, setIsVisible] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+ 
   const sectionRef = useRef(null);
-  const formRef = useRef(null);
+  
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -317,36 +309,6 @@ const ContactSection = ({ data, profile }) => {
 
     return () => observer.disconnect();
   }, []);
-
-  // Reset form after successful submission
-  useEffect(() => {
-    if (state.succeeded) {
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-
-      // Reset form using ref
-      if (formRef.current) {
-        formRef.current.reset();
-      }
-    }
-  }, [state.succeeded]);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    await handleSubmit(e);
-  };
 
   // Grid pattern SVG properly encoded
   const gridPattern = `data:image/svg+xml,${encodeURIComponent(`
