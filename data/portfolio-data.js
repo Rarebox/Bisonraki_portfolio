@@ -7,7 +7,7 @@ const portfolioData = {
     tagline: "Building the Decentralized Future",
     profileImage: "/projects/caglardev2.jpg",
     location: "Turkey, TR",
-    email: "info@bisonraki.net",
+    email: "info@birsonraki.net",
     phone: "+905461185531",
     linkedin: "https://tr.linkedin.com/in/caglar-usta-931671204",
     github: "https://github.com/rarebox",
