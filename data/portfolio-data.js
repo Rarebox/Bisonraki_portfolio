@@ -84,46 +84,46 @@ const portfolioData = {
 ,
 
   projects: [
-    {
-      id: 1,
-      title: "NFT Marketplace",
-      category: "NFT",
-      description:
-        "A decentralized NFT marketplace that allows users to mint, buy, sell, and trade unique digital assets seamlessly. Built with blockchain technology, it ensures secure transactions, transparent ownership, and full user control without intermediaries",
-      image: "/projects/1.jpeg",
-      technologies: ["Solidity", "React", "Web3.js", "Hardhat", "OpenZeppelin"],
-      features: [
-        "Multi-chain DEX with 0.05% trading fees",
-        "Liquid staking rewards (APY up to 15%)",
-        "Cross-chain bridge integration",
-        "Advanced yield farming strategies",
-        "Flash loan resistance",
-      ],
-     links: {
-        youtube: "", // Replace with actual YouTube video
-        demo: "https://birsonraki.net",
-        docs: "https://github.com/",
-      },
-      metrics: {
-        tvl: "$2.5M",
-        volume: "$50M+",
-        users: "10k+",
-      },
+  {
+    id: 1,
+    title: "ICO Presale Dapp (ERC20)",
+    category: "DeFi",
+    description:
+      "A new-generation level system supporting all EVM networks (ETH, BSC, Polygon, Base...) for presales, i.e., ICO platforms",
+    image: "/projects/icodapp.webp",
+    technologies: ["Solidity", "React", "Web3.js", "Hardhat", "OpenZeppelin"],
+    features: [
+      "Level system",
+      "Admin Panel",
+      "Smart Contracts",
+      "EVM supported",
+      "Full code",
+    ],
+    links: {
+      youtube: "https://www.youtube.com/watch?v=6p4p3qgSX7Y&t=2s",
+      demo: "https://ico-ndrop.vercel.app/",
+      docs: "https://github.com/", // Dikkat: Bu URL eksik, tam link olmalı
+      buyNow: "https://birsonraki.lemonsqueezy.com/buy/8fee93ad-a318-4a0a-8f2f-f471d82999c4", // 👈 Buraya LemonSqueezy linkini yaz!
     },
+    metrics: {
+      tvl: "$2.5M",
+      volume: "$50M+",
+      users: "10k+",
+    },
+  },
     {
       id: 2,
-      title: "Supply Chain Management Dapp",
+      title: "Token Staking DApp with Referral System | Like Ethereum, BSC, Polygon",
       category: "DeFi",
       description:
-        "Blockchain Supply chain management plays a critical role in ensuring efficient operations and maintaining consumer trust. This project focuses on developing and deploying a decentralized application (DApp) powered by blockchain technology to streamline supply chain management processes.",
-      image: "/projects/2.jpeg",
+        "The Referral-Based Token Staking Application supports all EVM networks and provides ready-to-use integration for your project. Smart contracts are included in the code.",
+      image: "/projects/stake.webp",
       technologies: ["Solidity", "Three.js", "IPFS", "Next.js", "Ethers.js"],
       features: [
-        "3D virtual galleries",
-        "Real-time NFT minting",
-        "Royalty distribution system",
-        "Social interaction features",
-        "VR compatibility",
+        "Referral-Based Token Staking",
+        "Full EVM supported",
+        "Smart contracts",
+       
       ],
        links: {
         youtube: "", // Replace with actual YouTube video

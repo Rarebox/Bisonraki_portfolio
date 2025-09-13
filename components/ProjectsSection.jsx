@@ -319,6 +319,7 @@
 // export default ProjectsSection;
 
 import { useState, useEffect, useRef } from "react";
+import { FaShoppingCart } from 'react-icons/fa';
 import Image from "next/image";
 import {
   FaYoutube,
@@ -658,40 +659,56 @@ const ProjectsSection = ({ data }) => {
 
                 {/* Action Links */}
                 <div className="flex flex-wrap gap-4 pt-4 border-t border-slate-700/30">
-                  {selectedProject.links.youtube && (
-                    <a
-                      href={selectedProject.links.youtube}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 px-6 py-3 bg-red-600/10 text-red-400 rounded-lg hover:bg-red-600/20 transition-all border border-red-400/20 hover:border-red-400/50"
-                    >
-                      <FaYoutube className="text-lg" />
-                      <span>Watch Demo</span>
-                    </a>
-                  )}
-                  {selectedProject.links.demo && (
-                    <a
-                      href={selectedProject.links.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-indigo-600 to-teal-600 text-white rounded-lg hover:opacity-90 transition-all"
-                    >
-                      <FaExternalLinkAlt />
-                      <span>Live Demo</span>
-                    </a>
-                  )}
-                  {selectedProject.links.docs && (
-                    <a
-                      href={selectedProject.links.docs}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 px-6 py-3 bg-slate-800/40 text-gray-300 rounded-lg hover:bg-slate-700/50 transition-all border border-slate-700/30 hover:border-cyan-400/50"
-                    >
-                      <FaBook />
-                      <span>Documentation</span>
-                    </a>
-                  )}
-                </div>
+  {selectedProject.links.youtube && (
+    <a
+      href={selectedProject.links.youtube}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-3 px-6 py-3 bg-red-600/10 text-red-400 rounded-lg hover:bg-red-600/20 transition-all border border-red-400/20 hover:border-red-400/50"
+    >
+      <FaYoutube className="text-lg" />
+      <span>Watch Demo</span>
+    </a>
+  )}
+
+  {selectedProject.links.demo && (
+    <a
+      href={selectedProject.links.demo}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-indigo-600 to-teal-600 text-white rounded-lg hover:opacity-90 transition-all"
+    >
+      <FaExternalLinkAlt />
+      <span>Live Demo</span>
+    </a>
+  )}
+
+  {selectedProject.links.docs && (
+    <a
+      href={selectedProject.links.docs}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-3 px-6 py-3 bg-slate-800/40 text-gray-300 rounded-lg hover:bg-slate-700/50 transition-all border border-slate-700/30 hover:border-cyan-400/50"
+    >
+      <FaBook />
+      <span>Documentation</span>
+    </a>
+  )}
+
+  {/* 👇 YENİ "BUY NOW" BUTONU - Turuncu, Beyaz, Inter Font, 16px */}
+  {selectedProject.links.buyNow && (
+    <a
+      href={selectedProject.links.buyNow}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-3 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-all font-inter text-sm md:text-base"
+      style={{ fontFamily: 'Inter, sans-serif', fontSize: '16px' }}
+    >
+      <FaShoppingCart className="text-lg" /> {/* İsteğe bağlı ikon */}
+      <span>Buy Now</span>
+    </a>
+  )}
+</div>
               </div>
             </div>
           </div>
